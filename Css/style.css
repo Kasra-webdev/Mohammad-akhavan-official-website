@@ -1,0 +1,1432 @@
+/* CSS Settings */
+
+@import url(../Font-Awesome/41_Html/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css);
+
+:root {
+    --music-lightgolden-bg: #999486;
+    --bottom-golden-light__beauty: #afaba0;
+    --stamp-golden-color: #897157;
+    --names-color: #655b4d;
+    --singer-color: rgb(77 75 68);
+    --darkgolden-color: #5f5a4e;
+    --body-bg: rgb(43, 43, 43);
+    --music-container-bg: url('../Image/Music-Container/Untitled-2.webp');
+    --header-footer-bg: black;
+    --text: white;
+    --header-hover: #17120e;
+    --scrollbar: black;
+    --social-animate: white;
+    --gold-light: rgb(206 183 166);
+    --contact-gradient: linear-gradient(210deg, rgba(184, 162, 121, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+[data-theme="light"] {
+    --body-bg: rgb(212, 212, 212);
+    --music-container-bg: url('../Image/Music-Container/Untitled-1.webp');
+    --header-footer-bg: white;
+    --text: black;
+    --header-hover: rgb(211, 211, 211);
+    --scrollbar: white;
+    --social-animate: rgb(61, 61, 61);
+}
+
+html {
+    scrollbar-color: var(--gold-light) var(--scrollbar);
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--body-bg);
+    overflow-y: hidden;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.inner-animate {
+    animation: fadeIn 3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+a,
+button,
+input {
+    transition: all .4s ease;
+}
+
+html,
+body,
+.header-navbar,
+.musics-container,
+.footer-bottom__container,
+.link,
+.title-text,
+.follow-text {
+    transition: all .5s ease;
+}
+
+/* Header styles */
+
+.header-navbar {
+    background-color: var(--header-footer-bg);
+    display: flex;
+    align-items: center;
+}
+
+.header-list {
+    width: 50%;
+}
+
+.top-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.top-list>li {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 4%;
+    transition: all .4s ease;
+}
+
+.top-list>li:hover {
+    background-color: var(--header-hover);
+    transform: scale(1.1);
+}
+
+.moving-header__in {
+    display: none;
+}
+
+.moving-header__out {
+    display: none;
+}
+
+.link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.header-icon {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 4%;
+}
+
+.header-icon>img {
+    width: 25%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.header-img__container {
+    position: relative;
+}
+
+.them-btn__container {
+    position: absolute;
+    background-color: rgb(43, 43, 43);
+    padding: .2%;
+    margin: 2%;
+    width: 3%;
+    border-radius: 50rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+}
+
+.them-btn-light__container {
+    background-color: rgb(212, 212, 212);
+}
+
+.them-btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 16%;
+    width: 2%;
+    background-color: white;
+    border-radius: 50%;
+    transition: all .5s ease;
+    aspect-ratio: 1 / 1;
+}
+
+.enable-them__animation {
+    animation: them .5s ease;
+    right: 70%;
+    background-color: black;
+}
+
+@keyframes them {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 70%;
+    }
+}
+
+.enable-them__animation2 {
+    animation: themBack .5s ease;
+    right: 0;
+}
+
+@keyframes themBack {
+    from {
+        right: 70%;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes moving {
+    from {
+        opacity: 0;
+        transform: translateX(-20%) scale(0.98);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.start-animate__mh__title {
+    animation: moving 3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.stamp-title__icon {
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    top: 63%;
+    left: 20%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.video-container {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+    border: 0.5px solid var(--gold-light);
+}
+
+/* Contact widget styles */
+
+.contact-widget {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 138px;
+    padding: 15px 0 15px 15px;
+    background: rgba(25, 25, 30, 0.80);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    z-index: 999999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(130px) scale(0.88);
+    transition: opacity 0.45s ease,
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.45s ease;
+    overflow: visible;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--music-lightgolden-bg);
+}
+
+.contact-widget.collapsed {
+    right: -115px;
+    transition: all .6s ease !important;
+}
+
+.contact-widget.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1);
+    transition: opacity 0.45s ease,
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.45s ease;
+    transition: all .6s ease !important;
+}
+
+.contact-toggle {
+    width: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: rgb(41, 41, 41);
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 17px 0 0 17px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.contact-toggle:hover {
+    background: rgb(59, 59, 59);
+}
+
+.contact-toggle i {
+    font-size: 16px;
+    transition: transform 0.4s ease;
+}
+
+.contact-widget.collapsed .contact-toggle i {
+    transform: rotate(180deg);
+    transition: all .6s ease;
+}
+
+.contact-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 11px;
+    margin-bottom: 9px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 3px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    border-radius: 11px;
+    font-size: 12px;
+    transition: background 0.25s ease,
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.contact-item:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 15px;
+    transition: transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.telegram-icon {
+    color: var(--bottom-golden-light__beauty);
+}
+
+.instagram-icon {
+    color: var(--bottom-golden-light__beauty);
+}
+
+/* Music container styles */
+
+.title-text {
+    color: var(--text);
+    text-align: left;
+    display: block;
+    margin: 2% 6% 2.2% 6%;
+    font-size: 1.5rem;
+}
+
+.musics-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: var(--music-container-bg);
+    background-size: cover;
+    margin: auto;
+    padding: 2%;
+    width: 90%;
+    border-radius: 1rem;
+}
+
+.music-card {
+    position: relative;
+    background-image: url(../Image/mohammad-01.webp);
+    background-size: cover;
+    margin: 1%;
+    width: 31%;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: transform .3s ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5%;
+}
+
+.music-card:hover {
+    transform: translateY(-7px);
+}
+
+.new-track {
+    background-image: url(../Image/Sama-New.webp) !important;
+}
+
+.musics-link {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(8, 8, 8, 0.800) 0%, rgba(255, 255, 255, 0) 50%);
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    text-decoration: none;
+    transition: opacity .3s ease;
+}
+
+.musics-link:hover {
+    opacity: 1;
+}
+
+.coming-box__container {
+    direction: rtl;
+    width: 25%;
+}
+
+.coming-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(209 0 0);
+    width: 5%;
+    writing-mode: sideways-rl;
+    text-orientation: mixed;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-txt {
+    color: white;
+    margin: auto;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.flex-control2 {
+    width: 35%;
+    text-align: center;
+    margin: 0;
+}
+
+.small-icon__musicname {
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.music-name {
+    color: var(--names-color);
+    margin: 0;
+    margin-bottom: .2%;
+    font-size: 1vw;
+    text-transform: capitalize;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.singer {
+    color: var(--singer-color);
+    margin: 0;
+    font-size: .8vw;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    font-weight: 600;
+}
+
+.flex-control {
+    width: 30%;
+    padding: .5%;
+    display: flex;
+}
+
+.music-icon {
+    width: 100%;
+    border-radius: .5rem;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.change-pages__box {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.pages {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: .3%;
+    width: clamp(30px, 3vw, 45px);
+    height: clamp(30px, 3vw, 45px);
+    color: black;
+    background-color: var(--bottom-golden-light__beauty);
+    border-radius: 50%;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    transition: all .4s ease;
+    text-decoration: none !important;
+    border: none !important;
+}
+
+.pages * {
+    text-decoration: none !important;
+}
+
+.pages,
+.pages:link,
+.pages:visited,
+.pages:hover,
+.pages:active {
+    text-decoration: none !important;
+    -webkit-text-decoration: none !important;
+}
+
+.pages:hover {
+    transform: translateY(-3px);
+    background-color: #928f87;
+}
+
+.pages-btn__active {
+    transform: translateY(-3px);
+    background-color: #76746d;
+}
+
+/* Footer Styles */
+
+.hero-footer {
+    margin-top: 5%;
+}
+
+.footer-top__container {
+    padding: 3.5%;
+    background-color: var(--header-footer-bg);
+}
+
+.contact-container {
+    width: 30%;
+    margin: auto;
+}
+
+.follow-text {
+    color: var(--text);
+    margin: 0;
+    text-align: center;
+}
+
+.contact-line {
+    width: 50%;
+    border-color: var(--music-lightgolden-bg);
+    margin: 3% auto;
+}
+
+.social-icon__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+.social {
+    color: rgb(124, 124, 124);
+    font-size: 1.6vw;
+    cursor: pointer;
+    transition: all .4s ease;
+    text-decoration: none;
+}
+
+.social:hover {
+    transform: scale(1.1);
+    color: var(--social-animate);
+}
+
+.footer-bottom__container {
+    background-color: var(--bottom-golden-light__beauty);
+    padding: 2% 3%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.control-move__btn {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+}
+
+.move-top__btn {
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.move-top__btn:hover {
+    transform: scale(1.1);
+}
+
+.move-top__btn>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 3rem;
+}
+
+.copyright-container {
+    text-align: center;
+}
+
+.copyright-text {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    color: rgb(36, 36, 36);
+}
+
+/* Media Quaries */
+
+@media screen and (max-width: 1600px) {
+    .header-icon>img {
+        width: 30%;
+    }
+
+    .them-btn__container {
+        width: 3.5%;
+        padding: .3%;
+    }
+
+    .title-text {
+        font-size: 1.7rem;
+        margin: 3% 6% 3.3% 6%;
+    }
+
+    .stamp-title__icon {
+        width: 12%;
+        left: 21%;
+        top: 62%;
+    }
+
+    .music-card {
+        margin: 2%;
+        width: 43%;
+        border-radius: .8rem;
+    }
+
+    .coming-txt {
+        font-size: 1rem;
+    }
+
+    .small-icon__musicname {
+        width: 30%;
+    }
+
+    .music-name {
+        font-size: 1.3rem;
+    }
+
+    .singer {
+        font-size: 1rem;
+    }
+
+    .music-icon {
+        border-radius: .8rem;
+    }
+
+    .hero-footer {
+        margin-top: 10%;
+    }
+
+    .footer-top__container {
+        padding: 4%;
+    }
+
+    .contact-container {
+        width: 40%;
+    }
+
+    .follow-text {
+        font-size: 1.7rem;
+    }
+
+    .contact-line {
+        width: 55%;
+        margin: 4% auto;
+    }
+
+    .social {
+        font-size: 1.9rem;
+        margin: 0 .1%;
+    }
+
+    .footer-bottom__container {
+        padding: 3%;
+    }
+
+    .move-top__btn>a {
+        font-size: 2.5rem;
+    }
+
+    .copyright-text {
+        font-size: 1rem;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .them-btn__container {
+        width: 4%;
+        padding: .3%;
+    }
+
+    .contact-widget {
+        width: 140px;
+        padding: 12px 0px 12px 19px;
+        right: 20px;
+    }
+
+    .coming-txt {
+        font-size: .9rem;
+    }
+
+    .small-icon__musicname {
+        width: 30%;
+    }
+
+    .music-name {
+        font-size: 1.2rem;
+    }
+
+    .singer {
+        font-size: .9rem;
+    }
+
+    .contact-line {
+        width: 65%;
+        margin: 4% auto;
+    }
+
+    .social {
+        font-size: 1.8rem;
+        margin: 0 .5%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .them-btn__container {
+        width: 4%;
+        padding: .2%;
+    }
+
+    .title-text {
+        font-size: 1.6rem;
+        margin: 3% 6% 3.3% 6%;
+    }
+
+    .stamp-title__icon {
+        width: 12%;
+        left: 20%;
+        top: 62%;
+    }
+
+    .contact-widget {
+        padding: 12px 3px 12px 19px;
+    }
+
+    .contact-item {
+        padding: 2px;
+    }
+
+    .coming-txt {
+        font-size: .8rem;
+    }
+
+    .music-name {
+        font-size: 1.1rem;
+    }
+
+    .singer {
+        font-size: .8rem;
+    }
+
+    .follow-text {
+        font-size: 1.6rem;
+    }
+
+    .contact-line {
+        width: 70%;
+        margin: 4% auto;
+    }
+
+    .social {
+        font-size: 1.8rem;
+        margin: 0 .5%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header-navbar {
+        flex-direction: column-reverse;
+        width: 20%;
+        position: fixed;
+        top: 0;
+        right: -25%;
+        z-index: 2000;
+        transition: all .6s ease-in-out;
+        height: 100%;
+        justify-content: flex-end;
+        opacity: 90%;
+    }
+
+    .top-list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-list>li {
+        padding: 35% 0;
+    }
+
+    .top-list>li:hover {
+        background-color: rgba(0, 0, 0, 0);
+        transform: scale(1.1);
+    }
+
+    .link {
+        font-size: 1.1rem;
+    }
+
+    .header-icon {
+        justify-content: flex-start;
+        width: 90%;
+        margin: 6%;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .header-icon>img {
+        width: 70%;
+    }
+
+    .moving-header__in {
+        display: flex;
+        color: var(--text);
+        cursor: pointer;
+        margin: 15% 20%;
+        font-size: 1.5rem;
+    }
+
+    .moving-header__out {
+        display: flex;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        margin: 2.5%;
+        font-size: 1.7rem;
+    }
+
+    .them-btn__container {
+        left: 0;
+        top: 0;
+        width: 6.5%;
+        padding: .3%;
+        margin: 3%;
+    }
+
+    .header-img {
+        width: 100%;
+    }
+
+    .contact-widget {
+        width: 140px;
+        padding: 12px 3px 12px 19px;
+        border-radius: 15px;
+    }
+
+    .contact-item {
+        padding: 2px;
+    }
+
+    .title-text {
+        font-size: 1.5rem;
+        margin: 4% 6% 4.3% 6%;
+    }
+
+    .stamp-title__icon {
+        width: 16%;
+        left: 9%;
+        top: 66%;
+    }
+
+    .music-card {
+        width: 43%;
+        margin: 3%;
+        border-radius: .4rem;
+    }
+
+    .coming-txt {
+        font-size: .7rem;
+    }
+
+    .small-icon__musicname {
+        width: 30%;
+    }
+
+    .music-name {
+        font-size: .9rem;
+    }
+
+    .singer {
+        font-size: .6rem;
+    }
+
+    .music-icon {
+        border-radius: .4rem;
+    }
+
+    .hero-footer {
+        margin-top: 10%;
+    }
+
+    .footer-top__container {
+        padding: 4%;
+    }
+
+    .contact-container {
+        width: 40%;
+    }
+
+    .follow-text {
+        font-size: 1.5rem;
+    }
+
+    .contact-line {
+        width: 75%;
+        margin: 5% auto;
+    }
+
+    .social {
+        font-size: 1.6rem;
+        margin: 0 .6%;
+    }
+
+    .footer-bottom__container {
+        padding: 3%;
+    }
+
+    .move-top__btn>a {
+        font-size: 2.4rem;
+    }
+
+    .copyright-text {
+        font-size: .9rem;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-navbar {
+        flex-direction: column-reverse;
+        width: 25%;
+        position: fixed;
+        top: 0;
+        right: -25%;
+        z-index: 2000;
+        transition: all .6s ease-in-out;
+        height: 100%;
+        justify-content: flex-end;
+        opacity: 90%;
+    }
+
+    .moving-header__in {
+        display: flex;
+        color: var(--text);
+        cursor: pointer;
+        margin: 15%;
+        font-size: 1.5rem;
+    }
+
+    .moving-header__out {
+        display: flex;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        margin: 3%;
+        font-size: 1.8rem;
+    }
+
+    .them-btn__container {
+        left: 0;
+        top: 0;
+        width: 7.8%;
+        padding: .7%;
+        margin: 3%;
+    }
+
+    .title-text {
+        font-size: 1.5rem;
+        margin: 5% 6% 5.2% 6%;
+    }
+
+    .stamp-title__icon {
+        width: 18%;
+        left: 8%;
+        top: 66%;
+    }
+
+    .contact-widget {
+        width: 140px;
+        padding: 12px 0 12px 10px;
+    }
+
+    .contact-item i {
+        font-size: 1.1rem;
+    }
+
+    .social-side__link {
+        font-size: .8rem;
+    }
+
+    .music-card {
+        width: 90%;
+        margin: 3%;
+    }
+
+    .coming-txt {
+        font-size: 1rem;
+    }
+
+    .small-icon__musicname {
+        width: 30%;
+    }
+
+    .music-name {
+        font-size: 1.3rem;
+    }
+
+    .singer {
+        font-size: .9rem;
+    }
+
+    .follow-text {
+        font-size: 1.5rem;
+    }
+
+    .contact-line {
+        width: 90%;
+        margin: 6% auto;
+    }
+
+    .social {
+        font-size: 1.6rem;
+        margin: 0 1%;
+    }
+
+    .move-top__btn>a {
+        font-size: 2.5rem;
+    }
+
+    .copyright-text {
+        font-size: .9rem;
+        width: 50%;
+        text-align: center;
+    }
+
+    .creator-text {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-navbar {
+        flex-direction: column-reverse;
+        width: 25%;
+        position: fixed;
+        top: 0;
+        right: -25%;
+        z-index: 2000;
+        transition: all .6s ease-in-out;
+        height: 100%;
+        justify-content: flex-end;
+        opacity: 90%;
+    }
+
+    .link {
+        font-size: 1rem;
+    }
+
+    .moving-header__in {
+        display: flex;
+        color: var(--text);
+        cursor: pointer;
+        margin: 20%;
+        font-size: 1.5rem;
+    }
+
+    .moving-header__out {
+        display: flex;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        margin: 3%;
+        font-size: 1.5rem;
+    }
+
+    .them-btn__container {
+        left: 0;
+        top: 0;
+        width: 10%;
+        padding: .8%;
+        margin: 3%;
+    }
+
+    .contact-widget {
+        width: 120px;
+        padding: 9px 0 7px 19px;
+        right: 5px;
+    }
+
+    .contact-widget.collapsed {
+        right: -100px;
+    }
+
+    .contact-item:hover {
+        transform: translateX(1.5px);
+    }
+
+    .social-side__link {
+        font-size: .7rem;
+    }
+
+    .title-text {
+        font-size: 1.1rem;
+        margin: 5% 6% 5.2% 6%;
+    }
+
+    .stamp-title__icon {
+        width: 20%;
+        left: 8%;
+        top: 66%;
+    }
+
+    .music-card {
+        width: 90%;
+        border-radius: .4rem;
+    }
+
+    .coming-txt {
+        font-size: .7rem;
+    }
+
+    .small-icon__musicname {
+        width: 30%;
+    }
+
+    .music-name {
+        font-size: 1rem;
+    }
+
+    .singer {
+        font-size: .7rem;
+    }
+
+    .music-icon {
+        border-radius: .4rem;
+    }
+
+    .follow-text {
+        font-size: 1.1rem;
+    }
+
+    .contact-line {
+        width: 100%;
+        margin: 7% auto;
+    }
+
+    .social {
+        font-size: 1.2rem;
+        margin: 0 1%;
+    }
+
+    .move-top__btn>a {
+        font-size: 2rem;
+    }
+
+    .copyright-text {
+        font-size: .8rem;
+        width: 50%;
+        text-align: center;
+    }
+
+    .creator-text {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-navbar {
+        flex-direction: column-reverse;
+        width: 30%;
+        position: fixed;
+        top: 0;
+        right: -30%;
+        z-index: 2000;
+        transition: all .5s ease-in-out;
+        height: 100%;
+        justify-content: flex-end;
+        opacity: 85%;
+    }
+
+    .moving-header__in {
+        display: flex;
+        color: var(--text);
+        cursor: pointer;
+        margin: 20%;
+        font-size: 1.5rem;
+    }
+
+    .moving-header__out {
+        display: flex;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        margin: 3%;
+        font-size: 1.5rem;
+    }
+
+    .them-btn__container {
+        left: 0;
+        top: 0;
+        width: 10%;
+        padding: .8%;
+        margin: 4%;
+    }
+
+    .title-text {
+        font-size: 1rem;
+        margin: 5% 6% 6% 6%;
+    }
+
+    .stamp-title__icon {
+        width: 20%;
+        left: 8%;
+        top: 66%;
+    }
+
+    .contact-widget {
+        width: 108px;
+        padding: 9px 0 7px 20px;
+        right: 5px;
+    }
+
+    .contact-widget.collapsed {
+        right: -85px;
+    }
+
+    .contact-title {
+        font-size: .7rem;
+        padding-bottom: 7px;
+    }
+
+    .contact-item {
+        padding: 0;
+        gap: 5%;
+    }
+
+    .contact-item:hover {
+        transform: translateX(2px);
+    }
+
+    .contact-item i {
+        font-size: 1rem;
+    }
+
+    .social-side__link {
+        font-size: .6rem;
+    }
+
+    .music-card {
+        width: 90%;
+        border-radius: .4rem;
+    }
+
+    .coming-txt {
+        font-size: .5rem;
+    }
+
+    .small-icon__musicname {
+        width: 30%;
+    }
+
+    .music-name {
+        font-size: .8rem;
+    }
+
+    .singer {
+        font-size: .6rem;
+    }
+
+    .music-icon {
+        border-radius: .4rem;
+    }
+
+    .follow-text {
+        font-size: 1rem;
+    }
+
+    .contact-line {
+        width: 100%;
+        margin: 7% auto;
+    }
+
+    .social {
+        font-size: 1.2rem;
+        margin: 0 1%;
+    }
+
+    .control-move__btn {
+        width: 10%;
+    }
+
+    .copyright-text {
+        font-size: .6rem;
+        width: 50%;
+        text-align: center;
+    }
+
+    .creator-text {
+        font-size: .7rem;
+    }
+}
